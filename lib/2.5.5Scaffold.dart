@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 
-int _count = 0; 
-class Scaffold_widget extends StatelessWidget {
-  const Scaffold_widget({super.key});
+class Scaffold_Widget extends StatefulWidget {
+  const Scaffold_Widget({super.key});
+
+  @override
+  _ScaffoldWidgetState createState() => _ScaffoldWidgetState();
+}
+
+class _ScaffoldWidgetState extends State<Scaffold_Widget> {
+  int _count = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {
-// Add your onPressed code here!
-          },
-          backgroundColor: Colors.pink,
-          child:  Icon(Icons.thumb_up),
-          
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
       appBar: AppBar(
         title: Text(
           'Bank',
@@ -33,48 +30,33 @@ class Scaffold_widget extends StatelessWidget {
           ),
         ),
       ),
-      body: AbsorbPointer(
-        child: Column(
-          children: [
-                Text(
-                  'You have pressed the button $_count times.',
-                  style: TextStyle(color: Colors.red, fontSize: 32),
-                ),
-               Image(image: AssetImage('Assets/1.jpg'))
-              ]
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.amber,
-        unselectedItemColor: Colors.grey,
-        currentIndex: 0,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-            ),
-            label: "Home",
+      body: Column(
+        children: [
+          Text(
+            'You have pressed the button $_count times.',
+            style: TextStyle(color: Colors.red, fontSize: 32),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.card_giftcard,
-            ),
-            label: "Profil",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.account_balance_sharp,
-            ),
-            label: "Profil",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.phone_forwarded_sharp,
-            ),
-            label: "Profil",
+          Image.asset(
+            'Assets/1.jpg',
+            height: 150,
+            width: 100,
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            _count++;
+          });
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 50.0,
+        ),
       ),
     );
   }
 }
+

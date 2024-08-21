@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-// ignore: camel_case_types
 @override
    Widget build(BuildContext context) {
-    return Dialogs();
+    return Dialog_Widget();
   }
 
-class Dialogs extends StatelessWidget {
+class Dialog_Widget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +20,10 @@ class Dialogs extends StatelessWidget {
   }
 
   showAlertDialog(BuildContext context) {
-// set up the button
     Widget okButton =  FloatingActionButton.small (
       child: Text("OK"),
       onPressed: () {},
     );
-
     AlertDialog alert = AlertDialog(
       title: Text("woluuu"),
       content: Text("ndak bahaya ta rek"),

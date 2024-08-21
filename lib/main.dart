@@ -5,9 +5,10 @@ import 'package:project1/2.5.1TextWidget.dart';
 import 'package:project1/2.5.2ImageWidget.dart';
 import 'package:project1/2.5.3MaterialDesigndaniOSCupertino.dart';
 import 'package:project1/2.5.4Button.dart';
+import 'package:project1/2.5.7InputdanSelectionWidget.dart';
 import 'package:project1/2.6.4ListView.dart';
 import 'package:project1/2.6.5GridView.dart';
-import 'package:project1/Dialogs.dart';
+import 'package:project1/2.5.6Dialog.dart';
 import 'package:project1/Inputands.dart';
 import 'package:project1/Stacks.dart';
 import 'package:project1/containerss.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Button_Widget(),
+      home: InputdanSelection_Widget(),
     );
   }
 }
