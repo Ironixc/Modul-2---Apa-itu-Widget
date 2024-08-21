@@ -9,10 +9,9 @@ import 'package:project1/2.5.7InputdanSelectionWidget.dart';
 import 'package:project1/2.6.4ListView.dart';
 import 'package:project1/2.6.5GridView.dart';
 import 'package:project1/2.5.6Dialog.dart';
-import 'package:project1/Inputands.dart';
-import 'package:project1/Stacks.dart';
-import 'package:project1/containerss.dart';
-import 'package:project1/rowcolom.dart';
+import 'package:project1/2.6.3Stack.dart';
+import 'package:project1/2.6.1Container.dart';
+import 'package:project1/2.6.2RowdanColumn.dart';
 import 'package:project1/2.5.5Scaffold.dart';
 void main() {
   runApp(const MyApp());

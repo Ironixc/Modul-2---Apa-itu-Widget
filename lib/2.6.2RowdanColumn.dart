@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Rowcolom extends StatelessWidget {
-  const Rowcolom({super.key});
+class RowdanColumn_Widget extends StatelessWidget {
+  const RowdanColumn_Widget({super.key});
 
   @override
   Widget build(BuildContext context) {
